@@ -1,0 +1,7 @@
+- name: 'lyon'
+  catch_phrase: 'New tech city in France'
+- name: 'rio'
+  catch_phrase: 'Farniente and code'
+- name: 'berlin'
+  catch_phrase: 'Freedom, wurst and startup'
+
