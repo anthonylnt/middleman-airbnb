@@ -24,3 +24,21 @@
 .footer .fa-heart {
   color: #D23333;
 }
+
+.footer-copyright {
+  text-align: right;
+}
+
+@media screen and (max-width: 980px) {
+  .footer {
+    justify-content: center;
+    display: block;
+  }
+  .footer-links {
+    justify-content: center;
+  }
+  .footer-copyright {
+    text-align: center;
+    padding: 30px;
+  }
+}
