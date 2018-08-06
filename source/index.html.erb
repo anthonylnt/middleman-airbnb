@@ -6,7 +6,16 @@ title: Le Wagon - Middleman
   <div class="banner-content">
     <h1>Le Wagon Paris</h1>
     <p>Learn to code in the two stars city</p>
-    <%= link_to "Start now", "about.html", class: "btn btn-primary btn-lg" %>
+    <form action="#" class="form-inline">
+       <input type="text" class="form-control input-lg" placeholder="Where?">
+       <input type="text" class="form-control input-lg" placeholder="When?">
+       <select name="" id="" class="form-control input-lg">
+         <option value="1">1 guest</option>
+         <option value="2">2 guests</option>
+         <option value="3">3 guests</option>
+       </select>
+       <input type="submit" class="btn_home" value="Search">
+     </form>
   </div>
 </div>
 
@@ -24,6 +33,25 @@ title: Le Wagon - Middleman
             <img class="card-user" src="https://kitt.lewagon.com/placeholder/users/<%= mentor.github_nickname %>">
             <a class="card-link" href="#" ></a>
           <% end %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<div class="container" id="home-flats">
+  <h2 class="text-center">Recent flats</h2>
+  <div class="row">
+    <% data.flats.each do |owner, flat| %>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="card" style="background-image: linear-gradient(-225deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 100%), url('https://kitt.lewagon.com/placeholder/cities/<%= flat.city_slug %>');">
+          <div class="card-category"><%= flat.city_name %></div>
+          <div class="card-description">
+            <h3><%= flat.name %></h3>
+            <p><%= flat.description %></p>
+          </div>
+          <%= image_tag "https://kitt.lewagon.com/placeholder/users/#{owner}", class:"card-user" %>
+          <%= link_to "", "flats/#{owner}.html", class: "card-link" %>
         </div>
       </div>
     <% end %>
